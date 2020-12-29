@@ -1,0 +1,7 @@
+rootProject.name = 'taxidriver'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+include ':RNSendIntentModule', ':app'
+project(':RNSendIntentModule').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-send-intent/android')
+include ':react-native-notification-sounds'
+project(':react-native-notification-sounds').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-notification-sounds/android')
